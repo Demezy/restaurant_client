@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:restaurant_client/features/menu_category_screen/bloc/menu_category_bloc.dart';
-import 'package:restaurant_client/features/product_details_view.dart/domain/product_detales.dart';
-import 'package:restaurant_client/features/product_details_view.dart/presentation/product_detales_view.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/presentation/product_detales_view.dart';
 
 class MenuInCategoryScreen extends StatelessWidget {
   final int categoryId;

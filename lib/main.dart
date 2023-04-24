@@ -46,9 +46,9 @@ Future<void> setup() async {
   await getIt.allReady(timeout: const Duration(seconds: 5));
 }
 
-void main() {
-  setup();
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await setup();
   runApp(const RestarauntApp());
 }
 

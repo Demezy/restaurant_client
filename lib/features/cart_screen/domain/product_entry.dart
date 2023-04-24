@@ -1,5 +1,5 @@
 import 'package:isar/isar.dart';
-import 'package:restaurant_client/features/product_details_view.dart/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
 
 part 'product_entry.g.dart';
 @Embedded()

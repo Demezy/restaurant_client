@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:restaurant_client/features/product_details_view.dart/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
 
 part 'product_category.freezed.dart';
 part 'product_category.g.dart';

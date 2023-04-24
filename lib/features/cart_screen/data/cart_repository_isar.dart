@@ -4,7 +4,7 @@ import 'package:restaurant_client/features/cart_screen/domain/cart_entry.dart';
 import 'package:restaurant_client/features/cart_screen/domain/cart_repository.dart';
 import 'package:restaurant_client/features/cart_screen/domain/category_entry.dart';
 import 'package:restaurant_client/features/cart_screen/domain/product_entry.dart';
-import 'package:restaurant_client/features/product_details_view.dart/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
 import 'package:restaurant_client/main.dart';
 
 class CartRepositoryIsar implements CartRepository {

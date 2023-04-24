@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:restaurant_client/features/menu_screen/domain/product_category.dart';
 import 'package:restaurant_client/features/menu_screen/domain/products_repository.dart';
-import 'package:restaurant_client/features/product_details_view.dart/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
 import 'package:restaurant_client/main.dart';
 
 typedef Json = Map<String, dynamic>;

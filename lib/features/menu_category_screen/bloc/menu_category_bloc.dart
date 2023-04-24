@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:restaurant_client/features/menu_screen/domain/products_repository.dart';
-import 'package:restaurant_client/features/product_details_view.dart/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
 import 'package:restaurant_client/main.dart';
 
 part 'menu_category_bloc.freezed.dart';
