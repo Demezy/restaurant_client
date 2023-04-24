@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restaurant_client/features/navbar/bloc/cart_bloc.dart';
 import 'package:restaurant_client/features/routing/app_routes.dart';
 
 class AppNavbar extends StatelessWidget {
@@ -39,7 +41,22 @@ class AppNavbar extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const Icon(Icons.shopping_cart_rounded),
-                    const Text('tabCart').tr(),
+                    BlocBuilder<CartBloc, CartState>(
+                      builder: (context, state) {
+                        return state.when(
+                          empty: () => const Text('tabCart').tr(),
+                          loading: () => const Text('tabCart').tr(),
+                          available: (cart) {
+                            final balance = cart.fold(
+                              0.0,
+                              (acc, element) =>
+                                  acc + (element.cost * element.cost),
+                            );
+                            return Text('$balance');
+                          },
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),

@@ -31,9 +31,6 @@ class MenuCategoryBloc extends Bloc<MenuCategoryEvent, MenuCategoryState> {
               _Ready(menu: menu),
             );
           },
-          // События ниже можно отправлять в аналитику, чтобы понять, какие продукты пользуются спросом.
-          productSelected: (product) {},
-          productDeselected: (product) {},
         );
       },
     );

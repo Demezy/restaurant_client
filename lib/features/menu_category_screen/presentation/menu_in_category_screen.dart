@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restaurant_client/features/cart_screen/bloc/cart_bloc.dart';
 import 'package:restaurant_client/features/menu_category_screen/bloc/menu_category_bloc.dart';
 import 'package:restaurant_client/features/product_details_view/domain/product_details.dart';
 import 'package:restaurant_client/features/product_details_view/presentation/product_details_view.dart';
@@ -64,7 +65,8 @@ class MenuInCategoryScreen extends StatelessWidget {
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: Theme.of(context).colorScheme.onBackground,
+                      // color: Theme.of(context).colorScheme .onBackground,
+                      color: Colors.white,
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -74,7 +76,7 @@ class MenuInCategoryScreen extends StatelessWidget {
                             currentProduct.imageUrl,
                             errorBuilder: (context, error, stackTrace) =>
                                 // Апиха дает ссылки на картинки, которые не доступны,
-                                // без авторизации. Отображаем заглушку
+                                // без авторизации. Отображаем заглушку.
                                 const Icon(Icons.error),
                           ),
                           Align(
@@ -90,7 +92,14 @@ class MenuInCategoryScreen extends StatelessWidget {
                                 style: Theme.of(context).textTheme.bodySmall,
                               ),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  BlocProvider.of<CartBloc>(context)
+                                      .add(
+                                    CartEvent.productAdded(
+                                      product: currentProduct,
+                                    ),
+                                  );
+                                },
                                 child: const Text('+'),
                               ),
                             ],

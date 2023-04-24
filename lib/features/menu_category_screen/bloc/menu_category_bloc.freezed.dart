@@ -19,44 +19,32 @@ mixin _$MenuCategoryEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(int productId) productSelected,
-    required TResult Function(int productId) productDeselected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(int productId)? productSelected,
-    TResult? Function(int productId)? productDeselected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(int productId)? productSelected,
-    TResult Function(int productId)? productDeselected,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_ProductSelected value) productSelected,
-    required TResult Function(_ProductDeselected value) productDeselected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_ProductSelected value)? productSelected,
-    TResult? Function(_ProductDeselected value)? productDeselected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_ProductSelected value)? productSelected,
-    TResult Function(_ProductDeselected value)? productDeselected,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -124,8 +112,6 @@ class _$_Started with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(int productId) productSelected,
-    required TResult Function(int productId) productDeselected,
   }) {
     return started();
   }
@@ -134,8 +120,6 @@ class _$_Started with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(int productId)? productSelected,
-    TResult? Function(int productId)? productDeselected,
   }) {
     return started?.call();
   }
@@ -144,8 +128,6 @@ class _$_Started with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(int productId)? productSelected,
-    TResult Function(int productId)? productDeselected,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -158,8 +140,6 @@ class _$_Started with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_ProductSelected value) productSelected,
-    required TResult Function(_ProductDeselected value) productDeselected,
   }) {
     return started(this);
   }
@@ -168,8 +148,6 @@ class _$_Started with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_ProductSelected value)? productSelected,
-    TResult? Function(_ProductDeselected value)? productDeselected,
   }) {
     return started?.call(this);
   }
@@ -178,8 +156,6 @@ class _$_Started with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_ProductSelected value)? productSelected,
-    TResult Function(_ProductDeselected value)? productDeselected,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -191,309 +167,6 @@ class _$_Started with DiagnosticableTreeMixin implements _Started {
 
 abstract class _Started implements MenuCategoryEvent {
   const factory _Started() = _$_Started;
-}
-
-/// @nodoc
-abstract class _$$_ProductSelectedCopyWith<$Res> {
-  factory _$$_ProductSelectedCopyWith(
-          _$_ProductSelected value, $Res Function(_$_ProductSelected) then) =
-      __$$_ProductSelectedCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int productId});
-}
-
-/// @nodoc
-class __$$_ProductSelectedCopyWithImpl<$Res>
-    extends _$MenuCategoryEventCopyWithImpl<$Res, _$_ProductSelected>
-    implements _$$_ProductSelectedCopyWith<$Res> {
-  __$$_ProductSelectedCopyWithImpl(
-      _$_ProductSelected _value, $Res Function(_$_ProductSelected) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? productId = null,
-  }) {
-    return _then(_$_ProductSelected(
-      productId: null == productId
-          ? _value.productId
-          : productId // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_ProductSelected
-    with DiagnosticableTreeMixin
-    implements _ProductSelected {
-  const _$_ProductSelected({required this.productId});
-
-  @override
-  final int productId;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MenuCategoryEvent.productSelected(productId: $productId)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'MenuCategoryEvent.productSelected'))
-      ..add(DiagnosticsProperty('productId', productId));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_ProductSelected &&
-            (identical(other.productId, productId) ||
-                other.productId == productId));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, productId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_ProductSelectedCopyWith<_$_ProductSelected> get copyWith =>
-      __$$_ProductSelectedCopyWithImpl<_$_ProductSelected>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(int productId) productSelected,
-    required TResult Function(int productId) productDeselected,
-  }) {
-    return productSelected(productId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(int productId)? productSelected,
-    TResult? Function(int productId)? productDeselected,
-  }) {
-    return productSelected?.call(productId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(int productId)? productSelected,
-    TResult Function(int productId)? productDeselected,
-    required TResult orElse(),
-  }) {
-    if (productSelected != null) {
-      return productSelected(productId);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_ProductSelected value) productSelected,
-    required TResult Function(_ProductDeselected value) productDeselected,
-  }) {
-    return productSelected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_ProductSelected value)? productSelected,
-    TResult? Function(_ProductDeselected value)? productDeselected,
-  }) {
-    return productSelected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_ProductSelected value)? productSelected,
-    TResult Function(_ProductDeselected value)? productDeselected,
-    required TResult orElse(),
-  }) {
-    if (productSelected != null) {
-      return productSelected(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ProductSelected implements MenuCategoryEvent {
-  const factory _ProductSelected({required final int productId}) =
-      _$_ProductSelected;
-
-  int get productId;
-  @JsonKey(ignore: true)
-  _$$_ProductSelectedCopyWith<_$_ProductSelected> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$_ProductDeselectedCopyWith<$Res> {
-  factory _$$_ProductDeselectedCopyWith(_$_ProductDeselected value,
-          $Res Function(_$_ProductDeselected) then) =
-      __$$_ProductDeselectedCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int productId});
-}
-
-/// @nodoc
-class __$$_ProductDeselectedCopyWithImpl<$Res>
-    extends _$MenuCategoryEventCopyWithImpl<$Res, _$_ProductDeselected>
-    implements _$$_ProductDeselectedCopyWith<$Res> {
-  __$$_ProductDeselectedCopyWithImpl(
-      _$_ProductDeselected _value, $Res Function(_$_ProductDeselected) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? productId = null,
-  }) {
-    return _then(_$_ProductDeselected(
-      productId: null == productId
-          ? _value.productId
-          : productId // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_ProductDeselected
-    with DiagnosticableTreeMixin
-    implements _ProductDeselected {
-  const _$_ProductDeselected({required this.productId});
-
-  @override
-  final int productId;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MenuCategoryEvent.productDeselected(productId: $productId)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'MenuCategoryEvent.productDeselected'))
-      ..add(DiagnosticsProperty('productId', productId));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_ProductDeselected &&
-            (identical(other.productId, productId) ||
-                other.productId == productId));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, productId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_ProductDeselectedCopyWith<_$_ProductDeselected> get copyWith =>
-      __$$_ProductDeselectedCopyWithImpl<_$_ProductDeselected>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(int productId) productSelected,
-    required TResult Function(int productId) productDeselected,
-  }) {
-    return productDeselected(productId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(int productId)? productSelected,
-    TResult? Function(int productId)? productDeselected,
-  }) {
-    return productDeselected?.call(productId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(int productId)? productSelected,
-    TResult Function(int productId)? productDeselected,
-    required TResult orElse(),
-  }) {
-    if (productDeselected != null) {
-      return productDeselected(productId);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_ProductSelected value) productSelected,
-    required TResult Function(_ProductDeselected value) productDeselected,
-  }) {
-    return productDeselected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_ProductSelected value)? productSelected,
-    TResult? Function(_ProductDeselected value)? productDeselected,
-  }) {
-    return productDeselected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_ProductSelected value)? productSelected,
-    TResult Function(_ProductDeselected value)? productDeselected,
-    required TResult orElse(),
-  }) {
-    if (productDeselected != null) {
-      return productDeselected(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ProductDeselected implements MenuCategoryEvent {
-  const factory _ProductDeselected({required final int productId}) =
-      _$_ProductDeselected;
-
-  int get productId;
-  @JsonKey(ignore: true)
-  _$$_ProductDeselectedCopyWith<_$_ProductDeselected> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
