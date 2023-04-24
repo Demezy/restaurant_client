@@ -19,21 +19,21 @@ mixin _$CartEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetails product) added,
+    required TResult Function(ProductDetails product) productAdded,
     required TResult Function(int productId) removed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetails product)? added,
+    TResult? Function(ProductDetails product)? productAdded,
     TResult? Function(int productId)? removed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetails product)? added,
+    TResult Function(ProductDetails product)? productAdded,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) =>
@@ -41,21 +41,21 @@ mixin _$CartEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Added value) added,
+    required TResult Function(_Added value) productAdded,
     required TResult Function(_Removed value) removed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Added value)? added,
+    TResult? Function(_Added value)? productAdded,
     TResult? Function(_Removed value)? removed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Added value)? added,
+    TResult Function(_Added value)? productAdded,
     TResult Function(_Removed value)? removed,
     required TResult orElse(),
   }) =>
@@ -117,7 +117,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetails product) added,
+    required TResult Function(ProductDetails product) productAdded,
     required TResult Function(int productId) removed,
   }) {
     return started();
@@ -127,7 +127,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetails product)? added,
+    TResult? Function(ProductDetails product)? productAdded,
     TResult? Function(int productId)? removed,
   }) {
     return started?.call();
@@ -137,7 +137,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetails product)? added,
+    TResult Function(ProductDetails product)? productAdded,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) {
@@ -151,7 +151,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Added value) added,
+    required TResult Function(_Added value) productAdded,
     required TResult Function(_Removed value) removed,
   }) {
     return started(this);
@@ -161,7 +161,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Added value)? added,
+    TResult? Function(_Added value)? productAdded,
     TResult? Function(_Removed value)? removed,
   }) {
     return started?.call(this);
@@ -171,7 +171,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Added value)? added,
+    TResult Function(_Added value)? productAdded,
     TResult Function(_Removed value)? removed,
     required TResult orElse(),
   }) {
@@ -235,7 +235,7 @@ class _$_Added implements _Added {
 
   @override
   String toString() {
-    return 'CartEvent.added(product: $product)';
+    return 'CartEvent.productAdded(product: $product)';
   }
 
   @override
@@ -259,32 +259,32 @@ class _$_Added implements _Added {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetails product) added,
+    required TResult Function(ProductDetails product) productAdded,
     required TResult Function(int productId) removed,
   }) {
-    return added(product);
+    return productAdded(product);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetails product)? added,
+    TResult? Function(ProductDetails product)? productAdded,
     TResult? Function(int productId)? removed,
   }) {
-    return added?.call(product);
+    return productAdded?.call(product);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetails product)? added,
+    TResult Function(ProductDetails product)? productAdded,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) {
-    if (added != null) {
-      return added(product);
+    if (productAdded != null) {
+      return productAdded(product);
     }
     return orElse();
   }
@@ -293,32 +293,32 @@ class _$_Added implements _Added {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Added value) added,
+    required TResult Function(_Added value) productAdded,
     required TResult Function(_Removed value) removed,
   }) {
-    return added(this);
+    return productAdded(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Added value)? added,
+    TResult? Function(_Added value)? productAdded,
     TResult? Function(_Removed value)? removed,
   }) {
-    return added?.call(this);
+    return productAdded?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Added value)? added,
+    TResult Function(_Added value)? productAdded,
     TResult Function(_Removed value)? removed,
     required TResult orElse(),
   }) {
-    if (added != null) {
-      return added(this);
+    if (productAdded != null) {
+      return productAdded(this);
     }
     return orElse();
   }
@@ -398,7 +398,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetails product) added,
+    required TResult Function(ProductDetails product) productAdded,
     required TResult Function(int productId) removed,
   }) {
     return removed(productId);
@@ -408,7 +408,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetails product)? added,
+    TResult? Function(ProductDetails product)? productAdded,
     TResult? Function(int productId)? removed,
   }) {
     return removed?.call(productId);
@@ -418,7 +418,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetails product)? added,
+    TResult Function(ProductDetails product)? productAdded,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) {
@@ -432,7 +432,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Added value) added,
+    required TResult Function(_Added value) productAdded,
     required TResult Function(_Removed value) removed,
   }) {
     return removed(this);
@@ -442,7 +442,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Added value)? added,
+    TResult? Function(_Added value)? productAdded,
     TResult? Function(_Removed value)? removed,
   }) {
     return removed?.call(this);
@@ -452,7 +452,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Added value)? added,
+    TResult Function(_Added value)? productAdded,
     TResult Function(_Removed value)? removed,
     required TResult orElse(),
   }) {

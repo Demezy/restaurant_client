@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class CardTile extends StatelessWidget {
   const CardTile({
-    Key? key,
     required this.onPressed,
     required this.content,
+    Key? key,
   }) : super(key: key);
 
   final Function() onPressed;
@@ -14,7 +14,7 @@ class CardTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onPressed,
-      child: Container(
+      child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: Colors.white,
