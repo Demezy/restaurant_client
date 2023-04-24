@@ -82,7 +82,10 @@ class MenuScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 '25 cm',
-                                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineSmall
+                                    ?.copyWith(
                                       color: Colors.white,
                                     ),
                               ),
@@ -103,9 +106,9 @@ class MenuScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final currentCategory = state.categories[index];
                         return GestureDetector(
-                          onTap: () =>
-                              MenuCategoryRoute(id: currentCategory.id).push<void>(context),
-                          child: Container(
+                          onTap: () => MenuCategoryRoute(id: currentCategory.id)
+                              .push<void>(context),
+                          child: DecoratedBox(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               color: Colors.white,
@@ -139,18 +142,21 @@ class MenuScreen extends StatelessWidget {
                                   child: Row(
                                     children: [
                                       Text(
-                                        'Meal',
-                                        style: Theme.of(context).textTheme.headlineLarge,
+                                        currentCategory.name,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineLarge,
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
                         );
                       },
-                      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                      gridDelegate:
+                          const SliverGridDelegateWithMaxCrossAxisExtent(
                         childAspectRatio: 0.9,
                         crossAxisSpacing: 16,
                         mainAxisSpacing: 16,
