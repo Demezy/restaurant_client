@@ -9,7 +9,8 @@ part 'menu_event.dart';
 part 'menu_state.dart';
 
 class MenuBloc extends Bloc<MenuEvent, MenuState> {
-  final productsRepository = getIt.get<ProductsRepository>();
+  final productsRepository = getIt<ProductsRepository>();
+
   MenuBloc() : super(const _Loading()) {
     on<MenuEvent>((event, emit) async {
       await event.when(

@@ -4,14 +4,14 @@ import 'package:restaurant_client/features/cart_screen/domain/cart_entry.dart';
 import 'package:restaurant_client/features/cart_screen/domain/cart_repository.dart';
 import 'package:restaurant_client/features/cart_screen/domain/category_entry.dart';
 import 'package:restaurant_client/features/cart_screen/domain/product_entry.dart';
-import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_details.dart';
 import 'package:restaurant_client/main.dart';
 
 class CartRepositoryIsar implements CartRepository {
   late final _isar = getIt<Isar>();
 
   @override
-  Future<void> addProductToCart(ProductDetales product) async {
+  Future<void> addProductToCart(ProductDetails product) async {
     _log('addProductToCart(product: $product)');
     final isar = _isar;
     final storedEntry = await isar.cart.get(product.id);
@@ -34,7 +34,7 @@ class CartRepositoryIsar implements CartRepository {
   }
 
   @override
-  Future<List<ProductDetales>> getCartProducts() async {
+  Future<List<ProductDetails>> getCartProducts() async {
     _log('getCartProducts()');
     final productIds =
         (await getCart()).map((cartEntry) => cartEntry.productId).toList();
@@ -45,7 +45,7 @@ class CartRepositoryIsar implements CartRepository {
     );
     return productEntries
         .map(
-          (entry) => entry.toProductDetales(),
+          (entry) => entry.toProductDetails(),
         )
         .toList();
   }
@@ -75,7 +75,7 @@ class CartRepositoryIsar implements CartRepository {
 
   @override
   Future<double> getCartTotal() async {
-    _log('getcartTotal()');
+    _log('getCartTotal()');
     final cart = await getCart();
     final cartMap = <int, CartEntry>{};
     for (final entry in cart) {

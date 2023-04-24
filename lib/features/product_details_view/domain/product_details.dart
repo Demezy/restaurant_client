@@ -1,11 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'product_detales.freezed.dart';
-part 'product_detales.g.dart';
+part 'product_details.freezed.dart';
+part 'product_details.g.dart';
 
 @freezed
-class ProductDetales with _$ProductDetales {
-  const factory ProductDetales({
+class ProductDetails with _$ProductDetails {
+  const factory ProductDetails({
     required int id,
     required String name,
     required String? description,
@@ -13,8 +13,8 @@ class ProductDetales with _$ProductDetales {
     required double cost,
     @JsonKey(name: 'sizes') required String weight,
     required int categoryId,
-  }) = _ProductDeales;
+  }) = _ProductDetails;
 
-  factory ProductDetales.fromJson(Map<String, dynamic> json) =>
-      _$ProductDetalesFromJson(json);
+  factory ProductDetails.fromJson(Map<String, dynamic> json) =>
+      _$ProductDetailsFromJson(json);
 }

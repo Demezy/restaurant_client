@@ -4,7 +4,7 @@ part of 'menu_category_bloc.dart';
 class MenuCategoryState with _$MenuCategoryState {
   const factory MenuCategoryState.loading() = _Loading;
   const factory MenuCategoryState.ready({
-    required List<ProductDetales> menu,
+    required List<ProductDetails> menu,
   }) = _Ready;
   const factory MenuCategoryState.error({
     required String message,

@@ -19,21 +19,21 @@ mixin _$CartEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetales product) added,
+    required TResult Function(ProductDetails product) added,
     required TResult Function(int productId) removed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetales product)? added,
+    TResult? Function(ProductDetails product)? added,
     TResult? Function(int productId)? removed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetales product)? added,
+    TResult Function(ProductDetails product)? added,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) =>
@@ -117,7 +117,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetales product) added,
+    required TResult Function(ProductDetails product) added,
     required TResult Function(int productId) removed,
   }) {
     return started();
@@ -127,7 +127,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetales product)? added,
+    TResult? Function(ProductDetails product)? added,
     TResult? Function(int productId)? removed,
   }) {
     return started?.call();
@@ -137,7 +137,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetales product)? added,
+    TResult Function(ProductDetails product)? added,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) {
@@ -191,9 +191,9 @@ abstract class _$$_AddedCopyWith<$Res> {
   factory _$$_AddedCopyWith(_$_Added value, $Res Function(_$_Added) then) =
       __$$_AddedCopyWithImpl<$Res>;
   @useResult
-  $Res call({ProductDetales product});
+  $Res call({ProductDetails product});
 
-  $ProductDetalesCopyWith<$Res> get product;
+  $ProductDetailsCopyWith<$Res> get product;
 }
 
 /// @nodoc
@@ -212,14 +212,14 @@ class __$$_AddedCopyWithImpl<$Res>
       product: null == product
           ? _value.product
           : product // ignore: cast_nullable_to_non_nullable
-              as ProductDetales,
+              as ProductDetails,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ProductDetalesCopyWith<$Res> get product {
-    return $ProductDetalesCopyWith<$Res>(_value.product, (value) {
+  $ProductDetailsCopyWith<$Res> get product {
+    return $ProductDetailsCopyWith<$Res>(_value.product, (value) {
       return _then(_value.copyWith(product: value));
     });
   }
@@ -231,7 +231,7 @@ class _$_Added implements _Added {
   const _$_Added({required this.product});
 
   @override
-  final ProductDetales product;
+  final ProductDetails product;
 
   @override
   String toString() {
@@ -259,7 +259,7 @@ class _$_Added implements _Added {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetales product) added,
+    required TResult Function(ProductDetails product) added,
     required TResult Function(int productId) removed,
   }) {
     return added(product);
@@ -269,7 +269,7 @@ class _$_Added implements _Added {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetales product)? added,
+    TResult? Function(ProductDetails product)? added,
     TResult? Function(int productId)? removed,
   }) {
     return added?.call(product);
@@ -279,7 +279,7 @@ class _$_Added implements _Added {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetales product)? added,
+    TResult Function(ProductDetails product)? added,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) {
@@ -325,9 +325,9 @@ class _$_Added implements _Added {
 }
 
 abstract class _Added implements CartEvent {
-  const factory _Added({required final ProductDetales product}) = _$_Added;
+  const factory _Added({required final ProductDetails product}) = _$_Added;
 
-  ProductDetales get product;
+  ProductDetails get product;
   @JsonKey(ignore: true)
   _$$_AddedCopyWith<_$_Added> get copyWith =>
       throw _privateConstructorUsedError;
@@ -398,7 +398,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ProductDetales product) added,
+    required TResult Function(ProductDetails product) added,
     required TResult Function(int productId) removed,
   }) {
     return removed(productId);
@@ -408,7 +408,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ProductDetales product)? added,
+    TResult? Function(ProductDetails product)? added,
     TResult? Function(int productId)? removed,
   }) {
     return removed?.call(productId);
@@ -418,7 +418,7 @@ class _$_Removed implements _Removed {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ProductDetales product)? added,
+    TResult Function(ProductDetails product)? added,
     TResult Function(int productId)? removed,
     required TResult orElse(),
   }) {
@@ -478,21 +478,21 @@ mixin _$CartState {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(
-            List<ProductDetales> products, List<CartEntry> cart)
+            List<ProductDetails> products, List<CartEntry> cart)
         ready,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ProductDetales> products, List<CartEntry> cart)?
+    TResult? Function(List<ProductDetails> products, List<CartEntry> cart)?
         ready,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ProductDetales> products, List<CartEntry> cart)?
+    TResult Function(List<ProductDetails> products, List<CartEntry> cart)?
         ready,
     required TResult orElse(),
   }) =>
@@ -574,7 +574,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(
-            List<ProductDetales> products, List<CartEntry> cart)
+            List<ProductDetails> products, List<CartEntry> cart)
         ready,
   }) {
     return loading();
@@ -584,7 +584,7 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ProductDetales> products, List<CartEntry> cart)?
+    TResult? Function(List<ProductDetails> products, List<CartEntry> cart)?
         ready,
   }) {
     return loading?.call();
@@ -594,7 +594,7 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ProductDetales> products, List<CartEntry> cart)?
+    TResult Function(List<ProductDetails> products, List<CartEntry> cart)?
         ready,
     required TResult orElse(),
   }) {
@@ -645,7 +645,7 @@ abstract class _$$_ReadyCopyWith<$Res> {
   factory _$$_ReadyCopyWith(_$_Ready value, $Res Function(_$_Ready) then) =
       __$$_ReadyCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<ProductDetales> products, List<CartEntry> cart});
+  $Res call({List<ProductDetails> products, List<CartEntry> cart});
 }
 
 /// @nodoc
@@ -665,7 +665,7 @@ class __$$_ReadyCopyWithImpl<$Res>
       products: null == products
           ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<ProductDetales>,
+              as List<ProductDetails>,
       cart: null == cart
           ? _value._cart
           : cart // ignore: cast_nullable_to_non_nullable
@@ -678,14 +678,14 @@ class __$$_ReadyCopyWithImpl<$Res>
 
 class _$_Ready implements _Ready {
   const _$_Ready(
-      {required final List<ProductDetales> products,
+      {required final List<ProductDetails> products,
       required final List<CartEntry> cart})
       : _products = products,
         _cart = cart;
 
-  final List<ProductDetales> _products;
+  final List<ProductDetails> _products;
   @override
-  List<ProductDetales> get products {
+  List<ProductDetails> get products {
     if (_products is EqualUnmodifiableListView) return _products;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_products);
@@ -730,7 +730,7 @@ class _$_Ready implements _Ready {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(
-            List<ProductDetales> products, List<CartEntry> cart)
+            List<ProductDetails> products, List<CartEntry> cart)
         ready,
   }) {
     return ready(products, cart);
@@ -740,7 +740,7 @@ class _$_Ready implements _Ready {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ProductDetales> products, List<CartEntry> cart)?
+    TResult? Function(List<ProductDetails> products, List<CartEntry> cart)?
         ready,
   }) {
     return ready?.call(products, cart);
@@ -750,7 +750,7 @@ class _$_Ready implements _Ready {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ProductDetales> products, List<CartEntry> cart)?
+    TResult Function(List<ProductDetails> products, List<CartEntry> cart)?
         ready,
     required TResult orElse(),
   }) {
@@ -794,10 +794,10 @@ class _$_Ready implements _Ready {
 
 abstract class _Ready implements CartState {
   const factory _Ready(
-      {required final List<ProductDetales> products,
+      {required final List<ProductDetails> products,
       required final List<CartEntry> cart}) = _$_Ready;
 
-  List<ProductDetales> get products;
+  List<ProductDetails> get products;
   List<CartEntry> get cart;
   @JsonKey(ignore: true)
   _$$_ReadyCopyWith<_$_Ready> get copyWith =>

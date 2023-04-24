@@ -1,7 +1,8 @@
 import 'package:isar/isar.dart';
-import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_details.dart';
 
 part 'product_entry.g.dart';
+
 @Embedded()
 class ProductEntry {
   late int productId;
@@ -12,8 +13,8 @@ class ProductEntry {
   late String weight;
   late int categoryId;
 
-  ProductDetales toProductDetales() {
-    return ProductDetales(
+  ProductDetails toProductDetails() {
+    return ProductDetails(
       id: productId,
       name: name,
       description: description,

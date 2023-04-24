@@ -1,10 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:restaurant_client/core/theme.dart';
 import 'package:restaurant_client/features/cart_screen/bloc/cart_bloc.dart';
 import 'package:restaurant_client/features/cart_screen/data/cart_repository_isar.dart';
 import 'package:restaurant_client/features/cart_screen/domain/cart_entry.dart';
@@ -17,8 +19,7 @@ import 'package:restaurant_client/features/routing/app_routes.dart';
 
 final _router = GoRouter(
   routes: $appRoutes,
-  errorBuilder: (context, state) =>
-      ErrorScreen(error: state.error!).build(context),
+  errorBuilder: (context, state) => ErrorScreen(error: state.error!).build(context),
 );
 
 final getIt = GetIt.instance;
@@ -48,12 +49,21 @@ Future<void> setup() async {
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
   await setup();
-  runApp(const RestarauntApp());
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [Locale('en', 'US'), Locale('ru', 'RU')],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('ru', 'RU'),
+      child: const RestaurantApp(),
+    ),
+  );
 }
 
-class RestarauntApp extends StatelessWidget {
-  const RestarauntApp({super.key});
+class RestaurantApp extends StatelessWidget {
+  const RestaurantApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +74,10 @@ class RestarauntApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp.router(
-        title: 'Restaurent App',
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        title: 'titleApp'.tr(),
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

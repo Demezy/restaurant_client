@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:restaurant_client/features/menu_category_screen/bloc/menu_category_bloc.dart';
-import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
-import 'package:restaurant_client/features/product_details_view/presentation/product_detales_view.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_details.dart';
+import 'package:restaurant_client/features/product_details_view/presentation/product_details_view.dart';
 
 class MenuInCategoryScreen extends StatelessWidget {
   final int categoryId;
@@ -15,7 +15,7 @@ class MenuInCategoryScreen extends StatelessWidget {
       ..add(const MenuCategoryEvent.started());
   }
 
-  void _showDetalesSheet(BuildContext context, ProductDetales product) {
+  void _showDetalesSheet(BuildContext context, ProductDetails product) {
     if (!context.mounted) {
       return;
     }
@@ -32,7 +32,7 @@ class MenuInCategoryScreen extends StatelessWidget {
           builder: (context, scrollController) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: ProductDetalesView(
+              child: ProductDetailsView(
                 product: product,
                 scrollController: scrollController,
               ),
@@ -59,15 +59,13 @@ class MenuInCategoryScreen extends StatelessWidget {
               itemCount: menuState.length,
               itemBuilder: (context, index) {
                 final currentProduct = menuState[index];
-                return
-                  GestureDetector(
-                    onTap: () => _showDetalesSheet(context, currentProduct),
-                    child:
-                DecoratedBox(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: Theme.of(context).colorScheme.onBackground,
-                  ),
+                return GestureDetector(
+                  onTap: () => _showDetalesSheet(context, currentProduct),
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Theme.of(context).colorScheme.onBackground,
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -89,7 +87,7 @@ class MenuInCategoryScreen extends StatelessWidget {
                             children: [
                               Text(
                                 '${currentProduct.cost.toString()}  \u20BD',
-                                style: Theme.of(context).textTheme.caption,
+                                style: Theme.of(context).textTheme.bodySmall,
                               ),
                               ElevatedButton(
                                 onPressed: () {},

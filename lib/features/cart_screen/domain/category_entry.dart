@@ -16,7 +16,7 @@ class CategoryEntry {
       id: id,
       name: name,
       imageUrl: imageUrl,
-      products: products.map((e) => e.toProductDetales()).toList(),
+      products: products.map((e) => e.toProductDetails()).toList(),
     );
   }
 }

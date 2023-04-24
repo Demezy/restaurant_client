@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'product_detales.dart';
+part of 'product_details.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ProductDeales _$$_ProductDealesFromJson(Map<String, dynamic> json) =>
-    _$_ProductDeales(
+_$_ProductDetails _$$_ProductDetailsFromJson(Map<String, dynamic> json) =>
+    _$_ProductDetails(
       id: json['id'] as int,
       name: json['name'] as String,
       description: json['description'] as String?,
@@ -17,7 +17,7 @@ _$_ProductDeales _$$_ProductDealesFromJson(Map<String, dynamic> json) =>
       categoryId: json['categoryId'] as int,
     );
 
-Map<String, dynamic> _$$_ProductDealesToJson(_$_ProductDeales instance) =>
+Map<String, dynamic> _$$_ProductDetailsToJson(_$_ProductDetails instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

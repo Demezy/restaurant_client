@@ -25,9 +25,22 @@ part 'app_routes.g.dart';
 class MenuScreenRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) => Scaffold(
-        backgroundColor: Colors.green[100],
         body: MenuScreen(),
-        bottomNavigationBar: AppNavbar(),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.business),
+              label: 'Business',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              label: 'School',
+            ),
+          ],
+          currentIndex: 0,
+          selectedItemColor: Colors.amber[800],
+          onTap: (_) {},
+        ),
       );
 }
 
@@ -43,17 +56,17 @@ class MenuCategoryRoute extends GoRouteData {
   Widget build(BuildContext context, GoRouterState state) => Scaffold(
         backgroundColor: Colors.green[100],
         body: MenuInCategoryScreen(categoryId: id),
-        bottomNavigationBar: AppNavbar(),
+        bottomNavigationBar: const AppNavbar(),
       );
 }
 
 class ErrorRoute extends GoRouteData {
   final Exception error;
+
   ErrorRoute({required this.error});
 
   @override
-  Widget build(BuildContext context, GoRouterState state) =>
-      ErrorScreen(error: error);
+  Widget build(BuildContext context, GoRouterState state) => ErrorScreen(error: error);
 }
 
 @immutable
@@ -62,6 +75,6 @@ class CartScreenRoute extends GoRouteData {
   Widget build(BuildContext context, GoRouterState state) => Scaffold(
         backgroundColor: Colors.green[100],
         body: const CartScreen(),
-        bottomNavigationBar: AppNavbar(),
+        bottomNavigationBar: const AppNavbar(),
       );
 }

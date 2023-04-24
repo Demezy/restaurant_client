@@ -501,21 +501,21 @@ mixin _$MenuCategoryState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<ProductDetales> menu) ready,
+    required TResult Function(List<ProductDetails> menu) ready,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ProductDetales> menu)? ready,
+    TResult? Function(List<ProductDetails> menu)? ready,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ProductDetales> menu)? ready,
+    TResult Function(List<ProductDetails> menu)? ready,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -606,7 +606,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<ProductDetales> menu) ready,
+    required TResult Function(List<ProductDetails> menu) ready,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -616,7 +616,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ProductDetales> menu)? ready,
+    TResult? Function(List<ProductDetails> menu)? ready,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -626,7 +626,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ProductDetales> menu)? ready,
+    TResult Function(List<ProductDetails> menu)? ready,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -680,7 +680,7 @@ abstract class _$$_ReadyCopyWith<$Res> {
   factory _$$_ReadyCopyWith(_$_Ready value, $Res Function(_$_Ready) then) =
       __$$_ReadyCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<ProductDetales> menu});
+  $Res call({List<ProductDetails> menu});
 }
 
 /// @nodoc
@@ -699,7 +699,7 @@ class __$$_ReadyCopyWithImpl<$Res>
       menu: null == menu
           ? _value._menu
           : menu // ignore: cast_nullable_to_non_nullable
-              as List<ProductDetales>,
+              as List<ProductDetails>,
     ));
   }
 }
@@ -707,11 +707,11 @@ class __$$_ReadyCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Ready with DiagnosticableTreeMixin implements _Ready {
-  const _$_Ready({required final List<ProductDetales> menu}) : _menu = menu;
+  const _$_Ready({required final List<ProductDetails> menu}) : _menu = menu;
 
-  final List<ProductDetales> _menu;
+  final List<ProductDetails> _menu;
   @override
-  List<ProductDetales> get menu {
+  List<ProductDetails> get menu {
     if (_menu is EqualUnmodifiableListView) return _menu;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_menu);
@@ -752,7 +752,7 @@ class _$_Ready with DiagnosticableTreeMixin implements _Ready {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<ProductDetales> menu) ready,
+    required TResult Function(List<ProductDetails> menu) ready,
     required TResult Function(String message) error,
   }) {
     return ready(menu);
@@ -762,7 +762,7 @@ class _$_Ready with DiagnosticableTreeMixin implements _Ready {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ProductDetales> menu)? ready,
+    TResult? Function(List<ProductDetails> menu)? ready,
     TResult? Function(String message)? error,
   }) {
     return ready?.call(menu);
@@ -772,7 +772,7 @@ class _$_Ready with DiagnosticableTreeMixin implements _Ready {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ProductDetales> menu)? ready,
+    TResult Function(List<ProductDetails> menu)? ready,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -818,9 +818,9 @@ class _$_Ready with DiagnosticableTreeMixin implements _Ready {
 }
 
 abstract class _Ready implements MenuCategoryState {
-  const factory _Ready({required final List<ProductDetales> menu}) = _$_Ready;
+  const factory _Ready({required final List<ProductDetails> menu}) = _$_Ready;
 
-  List<ProductDetales> get menu;
+  List<ProductDetails> get menu;
   @JsonKey(ignore: true)
   _$$_ReadyCopyWith<_$_Ready> get copyWith =>
       throw _privateConstructorUsedError;
@@ -897,7 +897,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<ProductDetales> menu) ready,
+    required TResult Function(List<ProductDetails> menu) ready,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -907,7 +907,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ProductDetales> menu)? ready,
+    TResult? Function(List<ProductDetails> menu)? ready,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -917,7 +917,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ProductDetales> menu)? ready,
+    TResult Function(List<ProductDetails> menu)? ready,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {

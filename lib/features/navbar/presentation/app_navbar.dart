@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant_client/features/routing/app_routes.dart';
 
@@ -8,9 +9,7 @@ class AppNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Theme.of(context).colorScheme.onBackground,
-      // type: BottomNavigationBarType.fixed,
+    return SafeArea(
       child: Row(
         children: [
           const Spacer(
@@ -18,13 +17,13 @@ class AppNavbar extends StatelessWidget {
           ),
           SizedBox(
             width: 90,
-            child: OutlinedButton(
-              onPressed: () => MenuScreenRoute().go(context),
+            child: InkWell(
+              onTap: () => MenuScreenRoute().go(context),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Icon(Icons.food_bank_rounded),
-                  Text('Еда'),
+                children: [
+                  const Icon(Icons.food_bank_rounded),
+                  const Text('tabFood').tr(),
                 ],
               ),
             ),
@@ -32,13 +31,13 @@ class AppNavbar extends StatelessWidget {
           const Spacer(),
           SizedBox(
             width: 90,
-            child: OutlinedButton(
-              onPressed: () => CartScreenRoute().go(context),
+            child: InkWell(
+              onTap: () => CartScreenRoute().go(context),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Icon(Icons.shopping_cart_rounded),
-                  Text('Корзина'),
+                children: [
+                  const Icon(Icons.shopping_cart_rounded),
+                  const Text('tabCart').tr(),
                 ],
               ),
             ),

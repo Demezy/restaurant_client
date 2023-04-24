@@ -25,7 +25,7 @@ mixin _$ProductCategory {
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   String get imageUrl => throw _privateConstructorUsedError;
-  List<ProductDetales> get products => throw _privateConstructorUsedError;
+  List<ProductDetails> get products => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ abstract class $ProductCategoryCopyWith<$Res> {
       {int id,
       @JsonKey(name: 'category_name') String name,
       @JsonKey(name: 'image_url') String imageUrl,
-      List<ProductDetales> products});
+      List<ProductDetails> products});
 }
 
 /// @nodoc
@@ -80,7 +80,7 @@ class _$ProductCategoryCopyWithImpl<$Res, $Val extends ProductCategory>
       products: null == products
           ? _value.products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<ProductDetales>,
+              as List<ProductDetails>,
     ) as $Val);
   }
 }
@@ -97,7 +97,7 @@ abstract class _$$_ProductCategoryCopyWith<$Res>
       {int id,
       @JsonKey(name: 'category_name') String name,
       @JsonKey(name: 'image_url') String imageUrl,
-      List<ProductDetales> products});
+      List<ProductDetails> products});
 }
 
 /// @nodoc
@@ -132,7 +132,7 @@ class __$$_ProductCategoryCopyWithImpl<$Res>
       products: null == products
           ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<ProductDetales>,
+              as List<ProductDetails>,
     ));
   }
 }
@@ -144,7 +144,7 @@ class _$_ProductCategory implements _ProductCategory {
       {required this.id,
       @JsonKey(name: 'category_name') required this.name,
       @JsonKey(name: 'image_url') required this.imageUrl,
-      required final List<ProductDetales> products})
+      required final List<ProductDetails> products})
       : _products = products;
 
   factory _$_ProductCategory.fromJson(Map<String, dynamic> json) =>
@@ -158,9 +158,9 @@ class _$_ProductCategory implements _ProductCategory {
   @override
   @JsonKey(name: 'image_url')
   final String imageUrl;
-  final List<ProductDetales> _products;
+  final List<ProductDetails> _products;
   @override
-  List<ProductDetales> get products {
+  List<ProductDetails> get products {
     if (_products is EqualUnmodifiableListView) return _products;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_products);
@@ -207,7 +207,7 @@ abstract class _ProductCategory implements ProductCategory {
       {required final int id,
       @JsonKey(name: 'category_name') required final String name,
       @JsonKey(name: 'image_url') required final String imageUrl,
-      required final List<ProductDetales> products}) = _$_ProductCategory;
+      required final List<ProductDetails> products}) = _$_ProductCategory;
 
   factory _ProductCategory.fromJson(Map<String, dynamic> json) =
       _$_ProductCategory.fromJson;
@@ -221,7 +221,7 @@ abstract class _ProductCategory implements ProductCategory {
   @JsonKey(name: 'image_url')
   String get imageUrl;
   @override
-  List<ProductDetales> get products;
+  List<ProductDetails> get products;
   @override
   @JsonKey(ignore: true)
   _$$_ProductCategoryCopyWith<_$_ProductCategory> get copyWith =>

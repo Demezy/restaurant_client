@@ -1,11 +1,12 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurant_client/features/product_details_view/domain/product_detales.dart';
+import 'package:restaurant_client/features/product_details_view/domain/product_details.dart';
 
-class ProductDetalesView extends StatelessWidget {
-  final ProductDetales product;
+class ProductDetailsView extends StatelessWidget {
+  final ProductDetails product;
   final ScrollController? scrollController;
 
-  const ProductDetalesView({
+  const ProductDetailsView({
     required this.product,
     this.scrollController,
     super.key,
@@ -42,11 +43,12 @@ class ProductDetalesView extends StatelessWidget {
             Text(product.cost.toString()),
             ElevatedButton(
               onPressed: () {},
-              child: const Text('Хочу!'),
+              child: const Text('buttonWant').tr(),
             ),
           ],
         ),
-        Text(product.description?? 'default description'),
+        if (product.description != null)
+          Text(product.description!),
         Text(product.weight.toString()),
         Text(product.imageUrl),
       ],
