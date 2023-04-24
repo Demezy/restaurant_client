@@ -1,16 +1,11 @@
 # restaurant_client
 
-A new Flutter project.
+simple flutter app that shows restaurant menu.
 
-## Getting Started
+# Gallery
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](./docs/categories.png)
+![image](./docs/cart.png)
+![image](./docs/submenu.png)
+![image](./docs/half-sideview.png)
+![image](./docs/full-sideview.png)
