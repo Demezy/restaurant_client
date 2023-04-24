@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:restaurant_client/features/menu_screen/domain/product_category.dart';
 import 'package:restaurant_client/features/menu_screen/domain/products_repository.dart';
@@ -42,15 +43,8 @@ class ProductsRepositoryDio implements ProductsRepository {
   }
 
   @override
-  Future<List<ProductDetails>?> getProductsFromCategory(int categoryId) async {
-    final categories = await getCategories();
-    for (final category in categories) {
-      if (category.id == categoryId) {
-        return category.products;
-      }
-    }
-    return null;
-  }
+  Future<List<ProductDetails>?> getProductsFromCategory(int categoryId) async =>
+      (await getCategories()).firstWhereOrNull((category) => category.id == categoryId)?.products;
 
   Future<void> setState(List<ProductCategory> state) async {
     if (!useDummyImage) {

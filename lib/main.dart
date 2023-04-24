@@ -16,6 +16,7 @@ import 'package:restaurant_client/features/error_screen/presentation/error_scree
 import 'package:restaurant_client/features/menu_screen/data/products_repository_dio.dart';
 import 'package:restaurant_client/features/menu_screen/domain/products_repository.dart';
 import 'package:restaurant_client/features/routing/app_routes.dart';
+import 'package:restaurant_client/locales.dart';
 
 final _router = GoRouter(
   routes: $appRoutes,
@@ -54,9 +55,9 @@ Future<void> main() async {
   await setup();
   runApp(
     EasyLocalization(
-      supportedLocales: const [Locale('en', 'US'), Locale('ru', 'RU')],
+      supportedLocales: const [Locales.ru, Locales.en],
       path: 'assets/translations',
-      fallbackLocale: const Locale('ru', 'RU'),
+      fallbackLocale: Locales.ru,
       child: const RestaurantApp(),
     ),
   );

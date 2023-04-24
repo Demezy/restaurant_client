@@ -10,8 +10,9 @@ part 'menu_category_event.dart';
 part 'menu_category_state.dart';
 
 class MenuCategoryBloc extends Bloc<MenuCategoryEvent, MenuCategoryState> {
-  final ProductsRepository productsRepository = getIt.get<ProductsRepository>();
+  final ProductsRepository productsRepository = getIt<ProductsRepository>();
   final int categoryId;
+  
   MenuCategoryBloc({required this.categoryId}) : super(const _Loading()) {
     on<MenuCategoryEvent>(
       (event, emit) {

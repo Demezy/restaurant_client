@@ -10,42 +10,45 @@ class AppNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Row(
-        children: [
-          const Spacer(
-            flex: 2,
-          ),
-          SizedBox(
-            width: 90,
-            child: InkWell(
-              onTap: () => MenuScreenRoute().go(context),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.food_bank_rounded),
-                  const Text('tabFood').tr(),
-                ],
+      child: ColoredBox(
+        color: Theme.of(context).colorScheme.onBackground,
+        child: Row(
+          children: [
+            const Spacer(
+              flex: 2,
+            ),
+            SizedBox(
+              width: 90,
+              child: InkWell(
+                onTap: () => MenuScreenRoute().go(context),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.food_bank_rounded),
+                    const Text('tabFood').tr(),
+                  ],
+                ),
               ),
             ),
-          ),
-          const Spacer(),
-          SizedBox(
-            width: 90,
-            child: InkWell(
-              onTap: () => CartScreenRoute().go(context),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.shopping_cart_rounded),
-                  const Text('tabCart').tr(),
-                ],
+            const Spacer(),
+            SizedBox(
+              width: 90,
+              child: InkWell(
+                onTap: () => CartScreenRoute().go(context),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.shopping_cart_rounded),
+                    const Text('tabCart').tr(),
+                  ],
+                ),
               ),
             ),
-          ),
-          const Spacer(
-            flex: 2,
-          ),
-        ],
+            const Spacer(
+              flex: 2,
+            ),
+          ],
+        ),
       ),
     );
   }

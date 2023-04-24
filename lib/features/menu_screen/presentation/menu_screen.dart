@@ -7,15 +7,12 @@ import 'package:restaurant_client/features/routing/app_routes.dart';
 class MenuScreen extends StatelessWidget {
   MenuScreen({super.key});
 
-  final MenuBloc menuBloc = MenuBloc()..add(const MenuEvent.started());
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider<MenuBloc>(
-      create: (context) => menuBloc,
+      create: (context) => MenuBloc()..add(const MenuEvent.started()),
       child: SafeArea(
         child: BlocBuilder<MenuBloc, MenuState>(
-          bloc: menuBloc,
           builder: (context, state) => state.map(
             loading: (_) => const Center(child: CircularProgressIndicator()),
             ready: (state) => Column(
